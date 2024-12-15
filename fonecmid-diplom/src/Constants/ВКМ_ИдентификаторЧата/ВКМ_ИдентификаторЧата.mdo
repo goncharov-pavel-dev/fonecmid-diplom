@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5364dfc7-d7ef-400c-aa2b-d518037cf227">
+  <producedTypes>
+    <managerType typeId="3b82ea82-cbe1-4868-abc2-7449038ecb23" valueTypeId="9fb96149-284a-420b-9b56-3054c809fbf2"/>
+    <valueManagerType typeId="222e1a92-9ecc-42b5-8d2d-43307f666fef" valueTypeId="fff769ba-b90a-49e2-be67-3da33fc6ca10"/>
+    <valueKeyType typeId="69ed29fd-3cf5-4f4a-abc7-114ae002999d" valueTypeId="fc9d160c-d332-4432-a0a8-dc059fdfb213"/>
+  </producedTypes>
+  <name>ВКМ_ИдентификаторЧата</name>
+  <synonym>
+    <key>ru</key>
+    <value>Идентификатор чата</value>
+  </synonym>
+  <type>
+    <types>Number</types>
+    <numberQualifiers>
+      <precision>20</precision>
+    </numberQualifiers>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>
