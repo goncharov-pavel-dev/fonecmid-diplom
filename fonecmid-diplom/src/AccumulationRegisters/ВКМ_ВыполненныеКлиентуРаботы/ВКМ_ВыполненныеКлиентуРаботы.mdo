@@ -17,10 +17,10 @@
   <dataLockControlMode>Managed</dataLockControlMode>
   <enableTotalsSplitting>true</enableTotalsSplitting>
   <resources uuid="94d566a3-6155-4a5c-9edb-5cfca6b22768">
-    <name>КоичествоЧасов</name>
+    <name>КоличествоЧасов</name>
     <synonym>
       <key>ru</key>
-      <value>Коичество часов</value>
+      <value>Количество часов</value>
     </synonym>
     <type>
       <types>Number</types>
