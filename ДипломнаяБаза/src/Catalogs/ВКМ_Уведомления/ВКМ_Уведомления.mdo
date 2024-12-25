@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b9812913-ae2f-4c5c-a255-4f6c9712dd5a">
+  <producedTypes>
+    <objectType typeId="d96f24e0-af74-4bd5-b3c5-8c9b9e06290c" valueTypeId="3179539f-10e6-4810-8634-7b3ed503fbbf"/>
+    <refType typeId="a7bfc84e-6901-42b6-b1d9-199093717180" valueTypeId="f63dbfc4-ffd2-4438-a52d-03c9490de4a5"/>
+    <selectionType typeId="d77c9207-059b-4948-bb20-c4ce91fc2f6b" valueTypeId="57548d37-4471-4606-a840-80b08a4d3f73"/>
+    <listType typeId="08aa289c-383b-4c62-bb98-371e0ca6ff26" valueTypeId="db69214c-20b7-4430-9fe3-d9f4832d44f1"/>
+    <managerType typeId="f3a5fe4c-1a06-4dba-bdb0-6dee0e31f810" valueTypeId="51e279a4-7163-45dc-963e-c70f92c2c51f"/>
+  </producedTypes>
+  <name>ВКМ_Уведомления</name>
+  <synonym>
+    <key>ru</key>
+    <value>ВКМ уведомления</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ВКМ_Уведомления.StandardAttribute.Code</inputByString>
+  <inputByString>Catalog.ВКМ_Уведомления.StandardAttribute.Description</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>25</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <attributes uuid="6f420757-0742-4dc9-9245-6a39e3649319">
+    <name>Текст</name>
+    <synonym>
+      <key>ru</key>
+      <value>Текст</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+</mdclass:Catalog>
