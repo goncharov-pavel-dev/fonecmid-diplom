@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mdclass:Document xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="cd8aa348-548b-4367-9372-1bc13d8e06d2">
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="cd8aa348-548b-4367-9372-1bc13d8e06d2">
   <producedTypes>
     <objectType typeId="c47d9e56-f567-45ee-b71d-00be5ab5c102" valueTypeId="544b746b-2f82-42fe-807d-5d3a8e5da266"/>
     <refType typeId="38bdebdb-14e3-490d-b199-d23429755c99" valueTypeId="ef932705-f0ec-45cc-9ae5-159fc37ee524"/>
@@ -25,4 +25,95 @@
   <autonumbering>true</autonumbering>
   <postInPrivilegedMode>true</postInPrivilegedMode>
   <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <tabularSections uuid="2960ff6e-2fda-431e-bed1-df58c7af0e9e">
+    <producedTypes>
+      <objectType typeId="4ecddffd-a402-4d90-9dcc-4caa8f59b245" valueTypeId="4d21496f-6298-4cc6-a881-82670415ea39"/>
+      <rowType typeId="550929ba-398b-4e6b-84c9-eabf9010a83a" valueTypeId="3a585cd2-d489-494c-81e9-d5ed31b74df7"/>
+    </producedTypes>
+    <name>ДополнительныеНачисления</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дополнительные начисления</value>
+    </synonym>
+    <attributes uuid="b1105ce7-1508-4cb7-bdce-1b2f552bbfd6">
+      <name>Сотрудник</name>
+      <synonym>
+        <key>ru</key>
+        <value>Сотрудник</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Пользователи</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="93427092-8eed-4988-abbe-d4e745d4fcbb">
+      <name>ВидРасчета</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вид расчета</value>
+      </synonym>
+      <type>
+        <types>ChartOfCalculationTypesRef.ВКМ_ДополнительныеНачисления</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="a4468394-f72e-4390-9471-3a8d9e16702e">
+      <name>ДатаНачала</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата начала</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="fea0a8f0-a29c-42ec-b6a1-b797f2722be6">
+      <name>ДатаОкончания</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата окончания</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="f9950935-b2a8-492a-b400-74a40b5d5545">
+      <name>Размер</name>
+      <synonym>
+        <key>ru</key>
+        <value>Размер</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+          <scale>2</scale>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
 </mdclass:Document>
