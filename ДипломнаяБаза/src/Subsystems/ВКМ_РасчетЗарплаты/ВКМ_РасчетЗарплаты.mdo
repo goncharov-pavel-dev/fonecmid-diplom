@@ -9,4 +9,5 @@
   <includeInCommandInterface>true</includeInCommandInterface>
   <content>InformationRegister.ВКМ_ГрафикРаботы</content>
   <content>Catalog.ВКМ_ГрафикиРаботы</content>
+  <content>DataProcessor.ВКМ_ЗаполнениеГрафика</content>
 </mdclass:Subsystem>
