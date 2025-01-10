@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mdclass:ChartOfCalculationTypes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="39d80d0f-1ce6-4462-a8b6-4117345aca58">
+<mdclass:ChartOfCalculationTypes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="584d1bdf-6a86-4885-98ed-3ac1b9c6e537">
   <producedTypes>
-    <objectType typeId="2fcb83cf-82d9-47b2-9eb3-7e3c48a51faa" valueTypeId="e1a0ace3-6efa-4e4f-a5c4-6b9f0264c680"/>
-    <refType typeId="25ce6c85-3384-4a07-9759-068fd7e171d5" valueTypeId="259e0e48-7129-488a-859e-97d9dfe73f27"/>
-    <selectionType typeId="2daa1998-40dd-47c9-a7bc-44228e8cd23d" valueTypeId="7eca2bf2-382f-4f3f-8f27-0b9027b9d66a"/>
-    <listType typeId="50f3acd5-47bd-4a6a-9daf-f827c2dc96de" valueTypeId="14465dd9-93f8-4ead-9071-8a2ea07a8a60"/>
-    <managerType typeId="903080ca-3254-4472-97a3-f0abe8b87f50" valueTypeId="93ea21ce-06a8-4694-9a64-e347bbfcbceb"/>
-    <displacingCalculationTypesType typeId="2395797d-04e8-4d58-b4b6-083232959031" valueTypeId="f0307d15-c923-4516-b6fc-820ff5a7140d"/>
-    <displacingCalculationTypesRowType typeId="eab50f6e-8aba-47f1-9a79-0537ecc78c2e" valueTypeId="05bf75e1-9dd2-4a37-b633-f54c1478fc3c"/>
-    <baseCalculationTypesType typeId="d04ca3f0-b354-4979-8e83-856bed4f083a" valueTypeId="e1274f2d-f849-4250-bda2-586404e18cf0"/>
-    <baseCalculationTypesRowType typeId="84f672d1-d334-4efb-8e93-4549791c4c91" valueTypeId="be6a4007-9184-4c97-8e27-b98caa552aea"/>
-    <leadingCalculationTypesType typeId="e9c6e65e-ee57-4a4e-88f5-e8f044cc046a" valueTypeId="c7bd670f-30ba-4268-89ae-a784410e47a1"/>
-    <leadingCalculationTypesRowType typeId="1a1b60f9-d945-4b29-9b2d-bdb0bfee1afc" valueTypeId="92993f62-4485-42d5-b2d0-b695ed10386f"/>
+    <objectType typeId="b9d3686c-8cc2-4fac-ac99-33b82a696d1c" valueTypeId="4d9bc1ca-2adc-4627-8e40-70d7b73b7493"/>
+    <refType typeId="13e26fff-c901-4742-b9f9-4d15396accca" valueTypeId="6c3f5968-0511-43e3-9691-90ca00971404"/>
+    <selectionType typeId="f2e81b09-b8fc-45e3-ad8a-b71427287455" valueTypeId="9d4060a0-cd7f-430a-a85a-4a13140b4c73"/>
+    <listType typeId="ad949240-17f1-41c4-96fd-154870cc298e" valueTypeId="5a808f38-5f19-44a3-a05b-273865495857"/>
+    <managerType typeId="ecb99052-0b80-48ac-891a-000ba7f13fff" valueTypeId="6e4c9160-0a3b-4ef5-a073-33c6035d089f"/>
+    <displacingCalculationTypesType typeId="0debede7-cf26-4f5d-807b-dbf11cea3b6e" valueTypeId="cce858e5-8be6-496a-a513-14d260dc3364"/>
+    <displacingCalculationTypesRowType typeId="360214a3-cae6-4538-b9dc-eedb05606746" valueTypeId="2b15c7c3-d7c5-4693-acc0-9d239a9387ed"/>
+    <baseCalculationTypesType typeId="129846d9-2012-4385-a1e7-29a0565b7aed" valueTypeId="b4a01558-f61f-4e34-a1d0-0370448e0e9f"/>
+    <baseCalculationTypesRowType typeId="fa8dd743-19f2-4a87-bfcf-5c6b2630cad6" valueTypeId="a0e45705-404b-459e-9847-e12942c985e2"/>
+    <leadingCalculationTypesType typeId="b98dbf98-1113-48b2-bcd3-cb4354d16ee5" valueTypeId="d0112b0c-136a-428f-b05c-a204e279c1e4"/>
+    <leadingCalculationTypesRowType typeId="c8eff0ce-21e1-407b-b7cb-0d1f1c99cbc0" valueTypeId="d6f70d6f-2ec9-4d36-873d-ac4c09a47683"/>
   </producedTypes>
   <name>ВКМ_Удержания</name>
   <synonym>
@@ -32,13 +32,19 @@
   <defaultPresentation>AsDescription</defaultPresentation>
   <editType>InDialog</editType>
   <choiceMode>BothWays</choiceMode>
+  <dependenceOnCalculationTypes>OnRegistrationPeriod</dependenceOnCalculationTypes>
+  <baseCalculationTypes>ChartOfCalculationTypes.ВКМ_ОсновныеНачисления</baseCalculationTypes>
+  <baseCalculationTypes>ChartOfCalculationTypes.ВКМ_ДополнительныеНачисления</baseCalculationTypes>
   <predefined>
-    <items id="fd58b5eb-c0ff-4018-b932-7d78fd0eff2a">
+    <items id="0c55eb8f-74c1-4173-bb67-01796dd0274c">
       <name>НДФЛ</name>
       <description>НДФЛ</description>
       <code xsi:type="core:StringValue">
         <value>1</value>
       </code>
+      <base>ChartOfCalculationTypes.ВКМ_ОсновныеНачисления.Оклад</base>
+      <base>ChartOfCalculationTypes.ВКМ_ОсновныеНачисления.Отпуск</base>
+      <base>ChartOfCalculationTypes.ВКМ_ДополнительныеНачисления.ФиксированнаяПремия</base>
     </items>
   </predefined>
 </mdclass:ChartOfCalculationTypes>
