@@ -15,4 +15,6 @@
   <content>AccumulationRegister.ВКМ_ВыполненныеКлиентуРаботы</content>
   <content>CommonModule.ВКМ_ТелеграмМодуль</content>
   <content>DataProcessor.ВКМ_МассовоеСозданиеАктов</content>
+  <content>InformationRegister.ВКМ_ГрафикРаботы</content>
+  <content>Catalog.ВКМ_ГрафикиРаботы</content>
 </mdclass:Subsystem>
