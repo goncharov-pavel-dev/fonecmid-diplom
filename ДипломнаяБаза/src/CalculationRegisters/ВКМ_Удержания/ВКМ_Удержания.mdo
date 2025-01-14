@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mdclass:CalculationRegister xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8014a28f-fb8a-474f-9afa-1f16d7d5c036">
+<mdclass:CalculationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8014a28f-fb8a-474f-9afa-1f16d7d5c036">
   <producedTypes>
     <selectionType typeId="0ad63a83-62cd-4119-a473-b0811e2ed1d2" valueTypeId="e6740aab-67ad-4448-bfad-66758f893bca"/>
     <listType typeId="b4e6d1f6-ee9e-4706-81b1-7cdea37ba5c7" valueTypeId="7e37a6f9-d13d-4125-9a44-f7cf1d4c4d3b"/>
@@ -18,4 +18,34 @@
   <periodicity>Month</periodicity>
   <chartOfCalculationTypes>ChartOfCalculationTypes.ВКМ_Удержания</chartOfCalculationTypes>
   <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="ac0ce713-3918-46b5-b70e-aaabbcc9dc22">
+    <name>Результат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Результат</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="f8dadb22-9c57-4464-92bc-1fd29a251a9a">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </dimensions>
 </mdclass:CalculationRegister>
