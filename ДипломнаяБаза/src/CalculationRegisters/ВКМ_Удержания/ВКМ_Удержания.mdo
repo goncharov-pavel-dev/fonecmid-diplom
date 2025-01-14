@@ -48,4 +48,17 @@
     <maxValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
   </dimensions>
+  <dimensions uuid="fbbbb638-fbda-4503-91ea-c9c461100e31">
+    <name>ИсточникНачисления</name>
+    <synonym>
+      <key>ru</key>
+      <value>Источник начисления</value>
+    </synonym>
+    <type>
+      <types>ChartOfCalculationTypesRef</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </dimensions>
 </mdclass:CalculationRegister>
