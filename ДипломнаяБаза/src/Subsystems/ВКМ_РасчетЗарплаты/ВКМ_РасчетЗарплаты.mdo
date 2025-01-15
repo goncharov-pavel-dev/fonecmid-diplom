@@ -15,4 +15,5 @@
   <content>Document.ВКМ_ВыплатаЗарплаты</content>
   <content>InformationRegister.ВКМ_УсловияОплатыСотрудников</content>
   <content>AccumulationRegister.ВКМ_ВыполненныеСотрудникомРаботы</content>
+  <content>CalculationRegister.ВКМ_ОсновныеНачисления</content>
 </mdclass:Subsystem>
