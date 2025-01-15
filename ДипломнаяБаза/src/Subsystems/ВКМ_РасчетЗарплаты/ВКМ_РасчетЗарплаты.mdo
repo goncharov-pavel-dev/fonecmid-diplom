@@ -16,4 +16,6 @@
   <content>InformationRegister.ВКМ_УсловияОплатыСотрудников</content>
   <content>AccumulationRegister.ВКМ_ВыполненныеСотрудникомРаботы</content>
   <content>CalculationRegister.ВКМ_ОсновныеНачисления</content>
+  <content>AccumulationRegister.ВКМ_ВзаиморасчетыССотрудниками</content>
+  <content>Document.ВКМ_ГрафикОтпусков</content>
 </mdclass:Subsystem>
