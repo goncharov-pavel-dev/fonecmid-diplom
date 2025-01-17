@@ -61,6 +61,15 @@
     <usePurposes>PersonalComputer</usePurposes>
     <usePurposes>MobileDevice</usePurposes>
   </forms>
+  <forms uuid="dfc8857e-8f5d-4f2d-a8ef-8e6aa745b749">
+    <name>АнализГрафика</name>
+    <synonym>
+      <key>ru</key>
+      <value>Анализ графика</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
   <tabularSections uuid="a6be3e71-685a-4117-b8cd-08ae59806c0d">
     <producedTypes>
       <objectType typeId="a12170a9-6fc1-4192-9bfe-2c414fd09f5c" valueTypeId="24fdf727-ea99-4b98-b9f7-dae4e5e9aadd"/>
