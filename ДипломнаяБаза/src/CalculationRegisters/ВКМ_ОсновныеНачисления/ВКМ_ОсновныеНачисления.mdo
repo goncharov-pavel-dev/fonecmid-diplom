@@ -88,10 +88,10 @@
     <scheduleLink>InformationRegister.ВКМ_ГрафикРаботы.Dimension.ГрафикРаботы</scheduleLink>
   </attributes>
   <attributes uuid="a8c2accb-c5bf-45e2-9d8a-14745e27e514">
-    <name>БазаЗа3Месяца</name>
+    <name>БазаЗа12Месяцев</name>
     <synonym>
       <key>ru</key>
-      <value>База за 3 месяца</value>
+      <value>База за 12 месяцев</value>
     </synonym>
     <type>
       <types>Number</types>

@@ -33,6 +33,13 @@
   <editType>InDialog</editType>
   <choiceMode>BothWays</choiceMode>
   <predefined>
+    <items id="69e8a354-b7e4-4e1a-9080-a3173709adf1">
+      <name>ПроцентЗаРаботы</name>
+      <description>Процент за работы</description>
+      <code xsi:type="core:StringValue">
+        <value>2</value>
+      </code>
+    </items>
     <items id="ddf0a5fa-df40-420d-af10-91a90cb96e8d">
       <name>ФиксированнаяПремия</name>
       <description>Фиксированная премия</description>
