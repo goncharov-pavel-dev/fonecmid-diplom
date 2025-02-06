@@ -216,9 +216,6 @@
       <userVisible>
         <common>true</common>
       </userVisible>
-      <dataPath xsi:type="form:DataPath">
-        <segments>Объект.Выплаты.ВидРасчета</segments>
-      </dataPath>
       <extendedTooltip>
         <name>ВыплатыВидРасчетаРасширеннаяПодсказка</name>
         <id>28</id>
@@ -481,6 +478,7 @@
     <enableStartDrag>true</enableStartDrag>
     <enableDrag>true</enableDrag>
     <fileDragMode>AsFileRef</fileDragMode>
+    <rowFilter xsi:type="core:UndefinedValue"/>
   </items>
   <autoCommandBar>
     <name>ФормаКоманднаяПанель</name>

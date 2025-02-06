@@ -12,4 +12,6 @@
   <content>Catalog.ВКМ_Уведомления</content>
   <content>Document.РеализацияТоваровУслуг</content>
   <content>DataProcessor.ВКМ_МассовоеСозданиеАктов</content>
+  <content>Report.ВКМ_АнализВыставленныхАктов</content>
+  <content>Catalog.ДоговорыКонтрагентов</content>
 </mdclass:Subsystem>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0a481b11-55cb-4059-b6e0-14e502ae9213">
+  <producedTypes>
+    <selectionType typeId="64fda4f0-b316-4529-b2cb-85ade21987b8" valueTypeId="51702462-0734-444d-af15-7b1d3262c98d"/>
+    <listType typeId="9c716032-da9d-494c-82d4-0f08f391a570" valueTypeId="8560a9a7-b46e-4d83-a0ff-f8567bd1ffce"/>
+    <managerType typeId="69fd4a30-8ade-4766-8264-f7fba451f953" valueTypeId="f0045ae3-6f95-4978-871e-6b8abf4dd5ae"/>
+    <recordSetType typeId="32fd6d41-af16-4390-b4bb-2353bb5e9d34" valueTypeId="216d0531-ebdb-453d-9291-39e5c3e614b1"/>
+    <recordKeyType typeId="c016726d-10a4-45d8-82d4-36a692c4ee95" valueTypeId="cd048540-e059-4f67-aaea-6f117c727303"/>
+    <recordType typeId="73342e0e-4edb-4477-93e8-a8b8739983b7" valueTypeId="50e42f57-c5d1-4689-911d-b5512415c539"/>
+  </producedTypes>
+  <name>ВКМ_ВыставленныеУслуги</name>
+  <synonym>
+    <key>ru</key>
+    <value>Выставленные услуги</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <registerType>Turnovers</registerType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="ebede997-29dc-44ad-a9ee-8962c85a79c0">
+    <name>ВыставленоЧасов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выставлено часов</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="447ad3a5-460b-485b-9e93-3a5d4d3d4833">
+    <name>ВыставленнаяСумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выставленная сумма</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="528a0a8a-2807-4575-8af0-61141b91069a">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="b3a9ae71-d963-49ad-86a6-3135f52e562c">
+    <name>Сотрудник</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сотрудник</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="ebe63c43-aa0f-4a5f-8de0-b9915831de38">
+    <name>Договор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ДоговорыКонтрагентов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="499f8145-a7a2-436c-abde-05fd58cb603a">
+    <name>Услуга</name>
+    <synonym>
+      <key>ru</key>
+      <value>Услуга</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>
