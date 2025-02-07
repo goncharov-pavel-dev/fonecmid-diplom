@@ -9,42 +9,79 @@
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Сотрудник</dataPath>
 			<field>Сотрудник</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
 		</field>
 		<field xsi:type="DataSetFieldField">
 			<dataPath>Год</dataPath>
 			<field>Год</field>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>КолвоОтпускаФакт</dataPath>
-			<field>КолвоОтпускаФакт</field>
+			<dataPath>ОтпускФакт</dataPath>
+			<field>ОтпускФакт</field>
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Колво отпуска факт</v8:content>
+					<v8:content>Отпуск факт</v8:content>
 				</v8:item>
 			</title>
 		</field>
 		<field xsi:type="DataSetFieldField">
-			<dataPath>КолвоОтпускаПлан</dataPath>
-			<field>КолвоОтпускаПлан</field>
+			<dataPath>ОтпускПлан</dataPath>
+			<field>ОтпускПлан</field>
 			<title xsi:type="v8:LocalStringType">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Колво отпуска план</v8:content>
+					<v8:content>Отпуск план</v8:content>
 				</v8:item>
 			</title>
 		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	ВКМ_ОсновныеНачисления.Сотрудник КАК Сотрудник,
-	РАЗНОСТЬДАТ(ВКМ_ОсновныеНачисления.ПериодДействияНачало, ВКМ_ОсновныеНачисления.ПериодДействияКонец, ДЕНЬ) КАК КолвоОтпускаФакт,
-	ВКМ_ПланОтпусковОбороты.КоличествоДнейОтпускаОборот КАК КолвоОтпускаПлан
+	СУММА(РАЗНОСТЬДАТ(ВКМ_ОсновныеНачисления.ПериодДействияНачало, ВКМ_ОсновныеНачисления.ПериодДействияКонец, ДЕНЬ)) КАК ОтпускФакт
+ПОМЕСТИТЬ ВТ_ОтпускФакт
 ИЗ
 	РегистрРасчета.ВКМ_ОсновныеНачисления КАК ВКМ_ОсновныеНачисления
-		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ВКМ_ПланОтпусков.Обороты КАК ВКМ_ПланОтпусковОбороты
-		ПО ВКМ_ОсновныеНачисления.Сотрудник = ВКМ_ПланОтпусковОбороты.Сотрудник
 ГДЕ
-	ВКМ_ОсновныеНачисления.ВидРасчета = &amp;ВидРасчета</query>
+	ВКМ_ОсновныеНачисления.ВидРасчета = &amp;ВидРасчета
+	И ВКМ_ОсновныеНачисления.ПериодДействияНачало &gt;= &amp;ПериодДействияНачало
+	И ВКМ_ОсновныеНачисления.ПериодДействияКонец &lt;= &amp;ПериодДействияКонец
+
+СГРУППИРОВАТЬ ПО
+	ВКМ_ОсновныеНачисления.Сотрудник
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВКМ_ПланОтпусковОбороты.Сотрудник КАК Сотрудник,
+	ВКМ_ПланОтпусковОбороты.КоличествоДнейОтпускаОборот КАК ОтпускПлан
+ПОМЕСТИТЬ ВТ_ОтпускПлан
+ИЗ
+	РегистрНакопления.ВКМ_ПланОтпусков.Обороты(&amp;ПериодДействияНачало, &amp;ПериодДействияКонец, , ) КАК ВКМ_ПланОтпусковОбороты
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ЕСТЬNULL(ВТ_ОтпускПлан.ОтпускПлан, 0) КАК ОтпускПлан,
+	ЕСТЬNULL(ВТ_ОтпускФакт.ОтпускФакт, 0) КАК ОтпускФакт,
+	ВТ_ОтпускПлан.Сотрудник КАК СотрудникПлан,
+	ВТ_ОтпускФакт.Сотрудник КАК СотрудникФакт
+ПОМЕСТИТЬ ВТ_Отчет
+ИЗ
+	ВТ_ОтпускФакт КАК ВТ_ОтпускФакт
+		ПОЛНОЕ СОЕДИНЕНИЕ ВТ_ОтпускПлан КАК ВТ_ОтпускПлан
+		ПО (ВТ_ОтпускПлан.Сотрудник = ВТ_ОтпускФакт.Сотрудник)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ЕСТЬNULL(ВТ_Отчет.СотрудникПлан, ВТ_Отчет.СотрудникФакт) КАК Сотрудник,
+	ВТ_Отчет.ОтпускПлан КАК ОтпускПлан,
+	ВТ_Отчет.ОтпускФакт КАК ОтпускФакт
+ИЗ
+	ВТ_Отчет КАК ВТ_Отчет</query>
 	</dataSet>
 	<parameter>
 		<name>Период</name>
@@ -114,6 +151,42 @@
 		<value xsi:type="dcscor:DesignTimeValue">ПланВидовРасчета.ВКМ_ОсновныеНачисления.Отпуск</value>
 		<useRestriction>true</useRestriction>
 	</parameter>
+	<parameter>
+		<name>ПериодДействияКонец</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период действия конец</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>ПериодДействияНачало</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период действия начало</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаНачала</expression>
+	</parameter>
 	<settingsVariant>
 		<dcsset:name>Основной</dcsset:name>
 		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
@@ -123,10 +196,10 @@
 					<dcsset:field>Сотрудник</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>КолвоОтпускаПлан</dcsset:field>
+					<dcsset:field>ОтпускПлан</dcsset:field>
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
-					<dcsset:field>КолвоОтпускаФакт</dcsset:field>
+					<dcsset:field>ОтпускФакт</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:dataParameters>
